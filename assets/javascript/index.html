@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>New York Times Search</title>
+    <title>Trivia!</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -15,25 +15,22 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Archivo+Black|Lora|Old+Standard+TT|Playfair+Display|Quicksand" rel="stylesheet">
 </head>
 
-
+<body style="font-family: 'News Cycle', sans-serif;">
 <div class="container">
- <div class="row">
+    <div class="row">
         <header class="col-md-12" style="margin-bottom: -45px;">
-            <h1>New York Times Article Search</h1>
-            <hr>
-            <br>
+            <h1>New York Times Article Search Tool</h1>
         </header>
     </div>
-   
-
-
+</div>
+<div class="container">
     <div class="row customContainer">
         <div class="col-md-12">
             <section>
-                
+                <hr>
+                <br>
                 <h5 class="inputLabels">Search Term:</h5>
                 <textarea id="searchTerm" placeholder="Enter search terms here" class="inputs"></textarea>
                 <br><br>
@@ -49,23 +46,34 @@
                 <br><br>
                 <h5 class="inputLabels">End Year (optional):</h5>
                 <textarea id="endDate" placeholder="Enter your desired cutoff end year" class="inputs"></textarea>
-                <button id="submit" class="button btn btn-default">Search <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                <button id="submit" class="button">Submit</button>
             </section>
         </div>
-   
+    </div>
 </div> 
 <hr>
-
-    <div class="row" id="customContainer">
+<div class="container">
+    <div class="row customContainer">
         <section id="articles" class="col-md-12">
-            <article class="responses col-md-4">
-
+            <article class="responses">
+                <h2>Title title title</h2>
+                <hr>
+                <div>
+                    <div style="float: left; margin-bottom: 10px;">
+                        <p>Author Author</p>
+                        <p>secton</p>
+                        <h4>date</h4>
+                    </div>
+                </div>
+                <hr class="clear">
+                <h5 class="text-center clear" ">urlhttps://www.bullshit.com/morebullshit/bullshitsubfolder/bullshit.html</h5>
+                    <img src="assets/images/placeholder.jpg" class="picture">
+                <div style="clear: both;"></div>
             </article>
         </section>
-    
-</div>  
-</div> 
+    </div>
+</div>   
 </body>
 <!-- Custom JS -->
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </html>

@@ -1,0 +1,137 @@
+*{
+	margin:0 auto;
+}
+body{
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	justify-content: center;
+}
+.container{
+	max-width: 980px;
+	margin:20px;
+	background-color: rgba(211, 211, 211, 0.53);
+	border-radius: 8px;
+}
+
+#customContainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-radius: 5px;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+
+.inputs {
+	width: 100%;
+	height: 30px;
+	margin-left: 5px;
+	border-radius: 3px;
+}
+
+.inputLabels {
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+textarea{
+	margin-top: 10px;
+}
+button {
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 1.3em;
+	
+}
+
+.responses {
+	display: flex;
+    flex-direction: column;
+	height: 300px;
+	width: 300px;
+	margin:5px;
+	background-color: white;
+	box-shadow: 
+	padding: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  	overflow: hidden;
+    padding-bottom: 10px;
+
+
+}
+
+.responses:hover {
+  box-shadow: 0 8px 14px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
+/*  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;*/
+}
+
+
+.picture {
+	height: 121px;
+	width: 100px;
+	float: right;
+	margin-top: -164px;
+	max-width: 100%; 
+	max-height: 100%; 
+	float: right; 
+	border: 1px solid white;
+}
+
+.clear {
+	clear: both;
+}
+#articles{
+	display: flex;
+    flex-wrap: wrap;
+}
+img{
+	padding-top: 10px;
+	height: 50%;
+	text-align: center;
+
+}
+
+h1{
+	font-family: 'Abril Fatface', cursive;
+}
+
+h2 {
+	
+	height: 10%;
+    white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	margin: 0px;
+  	padding-bottom: 36px;
+  	font-family: 'Abril Fatface', cursive;
+  	font-size: 20px;
+
+}
+
+p {
+	font-size: 15px;
+	padding-top: 7px;
+	margin: 0px;
+}
+
+h4 {
+	
+	margin: 0px;
+	font-size: 13px;
+}
+
+h5 {
+	font-size: 12px;
+	word-break: break-all;
+	margin: auto;
+
+}
