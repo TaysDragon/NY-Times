@@ -2,6 +2,16 @@ var queryURL="";
 $(document).ready(function(){
   $("#articles").empty();
 
+$("#clear").on("click", function(){
+  $("#articles").empty();
+  $("#endDate").val('');
+  $("#endDate").empty();
+  $("#startDate").val('');
+  $("#searchTerm").val('');
+  $("#searchTerm").empty();
+  $("#numberOfRecords").val('');
+});
+
     // Adding click event listen listener to all buttons
 $("#submit").on("click", function(){
       // Grabbing and storing the data-animal property value from the button
