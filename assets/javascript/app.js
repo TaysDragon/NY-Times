@@ -1,3 +1,4 @@
+var queryURL="";
 $(document).ready(function(){
   $("#articles").empty();
 
@@ -5,24 +6,63 @@ $(document).ready(function(){
 $("#submit").on("click", function(){
       // Grabbing and storing the data-animal property value from the button
       var searchTerm =$("#searchTerm").val();
-      // var startDate =2000;
-      // var endDate =2017;
+      var startDate =$("#startDate").val().trim();
+      
+      var endDate =$("#endDate").val().trim();
+      
       var resultsNum= $("#numberOfRecords").val();
-      console.log(resultsNum)
+     
+     if(startDate.length!=8 || endDate.length!=8){
+
+      $("#endDate").val('');
+       $("#startDate").val('');
+      $("#endDate").attr("placeholder", "please use format YYYYMMDD");
+      $("#startDate").attr("placeholder", "please use format YYYYMMDD");
+     
+     }
 
       $("#articles").empty();
       defaultImage= "../assets/newspaper_default.jpg";
 
-
-      // Constructing a queryURL using the animal name
-      var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-      queryURL += '?' + $.param({
-      'api-key': "4d60e927ce784f368e7d0e246154de1f",
-      'q': searchTerm,
-      // 'begin_date': startDate,
-      // 'end_date': endDate
       
+      queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+      queryURL += '?' 
+
+      if(parseInt(startDate)){
+    
+        if(parseInt(endDate)){
+
+          // queryURL= queryURL + "&end_date=" + endDate;
+          console.log(queryURL);
+            queryURL += $.param({
+            'api-key': "4d60e927ce784f368e7d0e246154de1f",
+            'q': searchTerm,
+            'begin_date': startDate,
+            'end_date': endDate
+            });
+        }else{
+          queryURL += $.param({
+          'api-key': "4d60e927ce784f368e7d0e246154de1f",
+          'q': searchTerm,
+          'begin_date': startDate 
+        });
+        }
+      }else if (parseInt(endDate)){
+          // queryURL= queryURL + "&end_date=" + endDate;
+          queryURL += $.param({
+            'api-key': "4d60e927ce784f368e7d0e246154de1f",
+            'q': searchTerm,
+            'end_date': endDate
+            });
+          console.log(queryURL);
+        }else{
+      
+
+       queryURL += $.param({
+      'api-key': "4d60e927ce784f368e7d0e246154de1f",
+      'q': searchTerm
       });
+      }
       
       // Performing an AJAX request with the queryURL
       $.ajax({
